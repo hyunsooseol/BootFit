@@ -1,11 +1,11 @@
 Package: BootFit
 Type: Package
-Title: Calculating Bootstrap Rasch Item Fit Statistic
+Title: Bootstrap Rasch Item Outfit and infit Statistics
 Version: 0.1.0
 Date: 2020-03-19
 Author: Hyunsoo Seol
 Maintainer: Hyunsoo Seol <snow@cau.ac.kr>
-Description: Calculating Bootstrap Rasch Item Fit Statistic
+Description: This package calculates bootstrap Item Fit Statistics based on Rasch Measurement Model
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
