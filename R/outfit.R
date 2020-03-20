@@ -11,7 +11,7 @@
 #'    #outfit.mnsq(data)
 #'
 #' @importFrom TAM tam.mml msq.itemfit
-#' @importFrom boot boot
+#' @importFrom boot boot boot.ci
 #' @export
 
 outfit.mnsq<- function(data,indices){

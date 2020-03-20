@@ -12,7 +12,7 @@
 #'
 #'
 #' @importFrom TAM tam.mml msq.itemfit
-#' @importFrom boot boot
+#' @importFrom boot boot boot.ci
 #' @export
 
 infit.mnsq<- function(data,indices){

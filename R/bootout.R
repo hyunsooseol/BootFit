@@ -10,7 +10,7 @@
 #'    #boot.outfit(data)
 #'
 #' @importFrom TAM tam.mml msq.itemfit
-#' @importFrom boot boot
+#' @importFrom boot boot boot.ci
 #' @export
 
 
@@ -18,7 +18,11 @@
 
 boot.outfit <- function(data){
 
-  boot.fit<- boot::boot(data = data,statistic = outfit.mnsq,
-                        R=1000)
+  boot.fit<- boot::boot(data = data,statistic = outfit.mnsq,R=100)
+
   return(boot.fit)
 }
+
+
+
+
