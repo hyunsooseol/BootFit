@@ -10,18 +10,20 @@
 #'    #boot.infit(data)
 #'
 #' @importFrom TAM tam.mml msq.itemfit
-#' @importFrom boot boot.ci
+#' @importFrom boot boot boot.ci
 #' @export
 
-outfit.con <- function(data){
+outfit.conf <- function(data){
 
-  for (i in 1:ncol(data)) {
+   d <- boot.outfit[[2]]
+
+  for (i in 1:ncol(d)) {
 
     # bootstrap 95% confidence interval
 
     outfit.ci<- boot::boot.ci(boot.outfit, index =i, type = "basic")
 
     ci<- outfit.ci[[4]][,4:5] # lower and upper 95% CI
-    print(c(outfit.ci, ci))
+    print(ci)
   }
 }
