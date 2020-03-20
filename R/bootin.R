@@ -9,16 +9,16 @@
 #'    #Not run
 #'    #boot.infit(data)
 #'
-#' @importFrom TAM tam.mml msq.itemfit
-#' @importFrom boot boot boot.ci
 #' @export
+#' @importFrom boot boot boot.ci
+#'
 
 
 #boot function using boot package
 
 boot.infit <- function(data){
 
-  boot.fit<- boot::boot(data = data,statistic = infit.mnsq,R=100)
+  boot.fit<- boot(data = data,statistic = infit.mnsq,R=100)
 
   return(boot.fit)
 }

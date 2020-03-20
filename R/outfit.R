@@ -10,17 +10,16 @@
 #'    #data <- read.csv("data.csv")
 #'    #outfit.mnsq(data)
 #'
-#' @importFrom TAM tam.mml msq.itemfit
-#' @importFrom boot boot boot.ci
 #' @export
+#' @importFrom TAM tam.mml msq.itemfit
 
 outfit.mnsq<- function(data,indices){
   data = data[indices,]
 
   # estimate Rasch model
-  Rasch <-TAM::tam.mml(resp=data)
+  Rasch <- tam.mml(resp=data)
   # item fit
-  fit <-TAM::msq.itemfit(Rasch)
+  fit <- msq.itemfit(Rasch)
   outfit<- fit[[1]][,3]
   return(outfit)
 }

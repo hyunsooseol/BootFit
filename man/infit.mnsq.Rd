@@ -20,5 +20,4 @@ This function calculates bootstrap item Infit Mnsq using MML estimation
     #data <- read.csv("data.csv")
    #infit.mnsq(data)
 
-
 }

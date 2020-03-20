@@ -17,6 +17,6 @@ This function calculates bootstrap item infit Mnsq using MML estimation
 }
 \examples{
    #Not run
-   #boot.infit(data)
+   #infit.conf(data)
 
 }

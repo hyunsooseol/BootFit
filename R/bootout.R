@@ -9,12 +9,9 @@
 #'    #Not run
 #'    #boot.outfit(data)
 #'
-#' @importFrom TAM tam.mml msq.itemfit
-#' @importFrom boot boot boot.ci
 #' @export
+#' @importFrom boot boot boot.ci
 
-
-#boot function using boot package
 
 boot.outfit <- function(data){
 

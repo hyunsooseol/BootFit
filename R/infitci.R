@@ -7,11 +7,11 @@
 #'
 #' @examples
 #'    #Not run
-#'    #boot.infit(data)
+#'    #infit.conf(data)
 #'
-#' @importFrom TAM tam.mml msq.itemfit
-#' @importFrom boot boot boot.ci
 #' @export
+#' @importFrom boot boot boot.ci
+
 
 infit.conf <- function(data){
 
@@ -21,7 +21,7 @@ infit.conf <- function(data){
 
     # bootstrap 95% confidence interval
 
-    infit.ci<- boot::boot.ci(boot.infit, index =i, type = "basic")
+    infit.ci<- boot.ci(boot.infit, index =i, type = "basic")
 
     ci<- infit.ci[[4]][,4:5] # lower and upper 95% CI
     print(ci)
