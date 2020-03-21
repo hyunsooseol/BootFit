@@ -15,7 +15,6 @@
 
 infit.confi <- function(object) {
 
-
   for (i in 1:ncol(object)) {
 
   # bootstrap confidence interval
@@ -25,5 +24,4 @@ infit.confi <- function(object) {
     print(infit.ci)
   }
 }
-
 
