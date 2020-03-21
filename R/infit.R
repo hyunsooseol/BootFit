@@ -1,30 +1,31 @@
 #' Bootstrap Infit.mnsq Function
 #'
 #' This function calculates bootstrap item Infit Mnsq using MML estimation
-#' @param data: the name of dataset
+#' @param object: the name of objectset
 #'
 #' @return: Bootstrap Item Infit.mnsq fit statistis
 #'
 #' @examples
 #'     #Not run
-#'     #data <- read.csv("data.csv")
-#'    #infit.mnsq(data)
+#'     #object <- read.csv("object.csv")
+#'    #infit.mnsq(object)
 #'
 #' @importFrom TAM tam.mml msq.itemfit
 #' @importFrom boot boot boot.ci
 #' @export
 
-boot.in<- function(data,indices){
+boot.in<- function(object,indices){
 
-  data = data[indices,]
+  object = object[indices,]
 
   # estimate Rasch model
-  Rasch <-TAM::tam.mml(resp=data)
+  Rasch <-TAM::tam.mml(resp=object)
   # item fit
   fit <-TAM::msq.itemfit(Rasch)
-  infit<- fit[[1]][,6]
+  infit<- fit$itemfit$Infit
   return(infit)
 }
+
 
 
 

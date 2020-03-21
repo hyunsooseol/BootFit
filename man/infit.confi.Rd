@@ -4,10 +4,10 @@
 \alias{infit.confi}
 \title{Bootstrap boot infit.mnsq CI Function}
 \usage{
-infit.confi(data)
+infit.confi(object)
 }
 \arguments{
-\item{data:}{the name of dataset}
+\item{object:}{the name of objectset}
 }
 \value{
 : print Bootstrap Item Outfit.mnsq CI statistis
@@ -17,6 +17,6 @@ This function calculates bootstrap item infit Mnsq using MML estimation
 }
 \examples{
    #Not run
-   #infit.conf(data)
+   #infit.conf(object)
 
 }

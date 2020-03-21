@@ -4,10 +4,10 @@
 \alias{boot.in}
 \title{Bootstrap Infit.mnsq Function}
 \usage{
-boot.in(data, indices)
+boot.in(object, indices)
 }
 \arguments{
-\item{data:}{the name of dataset}
+\item{object:}{the name of objectset}
 }
 \value{
 : Bootstrap Item Infit.mnsq fit statistis
@@ -17,7 +17,7 @@ This function calculates bootstrap item Infit Mnsq using MML estimation
 }
 \examples{
     #Not run
-    #data <- read.csv("data.csv")
-   #infit.mnsq(data)
+    #object <- read.csv("object.csv")
+   #infit.mnsq(object)
 
 }

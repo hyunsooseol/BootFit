@@ -4,10 +4,10 @@
 \alias{boot.infit}
 \title{Bootstrap boot infit.mnsq Function}
 \usage{
-boot.infit(data)
+boot.infit(object)
 }
 \arguments{
-\item{data:}{the name of dataset}
+\item{object:}{the name of objectset}
 }
 \value{
 : Bootstrap Statistics
@@ -17,6 +17,6 @@ This function calculates bootstrap item infit Mnsq using MML estimation
 }
 \examples{
 
-   #boot.infit(data)
+   #boot.infit(object)
 
 }
