@@ -2,9 +2,7 @@
 
 export(boot.infit)
 export(boot.outfit)
-export(infit.conf)
 export(infit.mnsq)
-export(outfit.conf)
 export(outfit.mnsq)
 importFrom(TAM,msq.itemfit)
 importFrom(TAM,tam.mml)

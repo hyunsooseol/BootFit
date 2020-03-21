@@ -10,8 +10,8 @@
 #'     #data <- read.csv("data.csv")
 #'    #infit.mnsq(data)
 #'
-#' @export
 #' @importFrom TAM tam.mml msq.itemfit
+#' @export
 
 infit.mnsq<- function(data,indices){
 

@@ -3,25 +3,22 @@
 #' This function calculates bootstrap item infit Mnsq using MML estimation
 #' @param data: the name of dataset
 #'
-#' @return: Bootstrap Item Outfit.mnsq fit statistis
+#' @return: Bootstrap Statistics
 #'
 #' @examples
-#'    #Not run
+#'
 #'    #boot.infit(data)
 #'
-#' @export
 #' @importFrom boot boot boot.ci
-#'
+#' @export
 
-
-#boot function using boot package
 
 boot.infit <- function(data){
 
   boot.fit<- boot(data = data,statistic = infit.mnsq,R=100)
 
   return(boot.fit)
-}
+ }
 
 
 

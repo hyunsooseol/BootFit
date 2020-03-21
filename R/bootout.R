@@ -9,9 +9,8 @@
 #'    #Not run
 #'    #boot.outfit(data)
 #'
-#' @export
 #' @importFrom boot boot boot.ci
-
+#' @export
 
 boot.outfit <- function(data){
 

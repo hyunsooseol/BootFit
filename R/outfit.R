@@ -10,8 +10,8 @@
 #'    #data <- read.csv("data.csv")
 #'    #outfit.mnsq(data)
 #'
-#' @export
 #' @importFrom TAM tam.mml msq.itemfit
+#' @export
 
 outfit.mnsq<- function(data,indices){
   data = data[indices,]

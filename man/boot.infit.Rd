@@ -10,13 +10,13 @@ boot.infit(data)
 \item{data:}{the name of dataset}
 }
 \value{
-: Bootstrap Item Outfit.mnsq fit statistis
+: Bootstrap Statistics
 }
 \description{
 This function calculates bootstrap item infit Mnsq using MML estimation
 }
 \examples{
-   #Not run
+
    #boot.infit(data)
 
 }

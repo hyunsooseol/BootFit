@@ -3,30 +3,49 @@
 #' This function calculates bootstrap item infit Mnsq using MML estimation
 #' @param data: the name of dataset
 #'
-#' @return: Bootstrap Item Outfit.mnsq CI statistis
+#' @return: print Bootstrap Item Outfit.mnsq CI statistis
 #'
 #' @examples
 #'    #Not run
 #'    #infit.conf(data)
 #'
-#' @export
+#' @importFrom TAM tam.mml msq.itemfit
 #' @importFrom boot boot boot.ci
+#' @export
 
+infit.mnsq<- function(data,indices){
 
-infit.conf <- function(data){
+  data = data[indices,]
 
-        d <- boot.infit[[2]]
-
-     for (i in 1:ncol(d)) {
-
-    # bootstrap 95% confidence interval
-
-    infit.ci<- boot.ci(boot.infit, index =i, type = "basic")
-
-    ci<- infit.ci[[4]][,4:5] # lower and upper 95% CI
-    print(ci)
-  }
+  # estimate Rasch model
+  Rasch <- tam.mml(resp=data)
+  # item fit
+  fit <- msq.itemfit(Rasch)
+  infit<- fit[[1]][,6]
+  return(infit)
 }
 
+boot.infit <- function(data){
 
+  boot.fit<- boot(data = data,statistic = infit.mnsq,
+                  R=100)
+
+  return(boot.fit)
+}
+
+infit.confi <- function(data) {
+
+  d <- boot.fit[[2]]
+
+  for (i in 1:ncol(d)) {
+
+  # bootstrap confidence interval
+
+    infit.ci <- boot.ci(boot.infit, index = i, type = "basic")
+
+    ci <- infit.ci[[4]][, 4:5] # lower and upper 95 CI
+    print(ci)
+  }
+
+}
 
