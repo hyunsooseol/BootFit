@@ -1,26 +1,26 @@
 #' Bootstrap outfit.mnsq Function
 #'
 #' This function calculates bootstrap item Outfit Mnsq using MML estimation
-#' @param data: the name of dataset
+#' @param object: the name of objectset
 #'
 #' @return: Bootstrap Item Outfit.mnsq fit statistis
 #'
 #' @examples
 #'    #Not run
-#'    #data <- read.csv("data.csv")
-#'    #outfit.mnsq(data)
+#'    #object <- read.csv("object.csv")
+#'    #outfit.mnsq(object)
 #'
 #' @importFrom TAM tam.mml msq.itemfit
 #' @export
 
-outfit.mnsq<- function(data,indices){
-  data = data[indices,]
+boot.out<- function(object,indices){
+  object = object[indices,]
 
   # estimate Rasch model
-  Rasch <- TAM::tam.mml(resp=data)
+  Rasch <- TAM::tam.mml(resp=object)
   # item fit
   fit <- TAM::msq.itemfit(Rasch)
-  outfit<- fit[[1]][,3]
+  outfit<- fit$itemfit$Outfit
   return(outfit)
 }
 

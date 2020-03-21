@@ -13,38 +13,15 @@
 #' @importFrom boot boot boot.ci
 #' @export
 
-outfit.mnsq<- function(data,indices){
-  data = data[indices,]
-
-  # estimate Rasch model
-  Rasch <- TAM::tam.mml(resp=data)
-  # item fit
-  fit <- TAM::msq.itemfit(Rasch)
-  outfit<- fit[[1]][,3]
-
-}
-
-boot.outfit <- function(data){
-
-  boot.fit<- boot::boot(data = data,statistic = outfit.mnsq,
-                  R=100)
+outfit.confi <- function(object) {
 
 
-}
+  for (i in 1:ncol(object)) {
 
-outfit.confi <- function(data) {
-
-  d <- boot.fit[[2]]
-
-  for (i in 1:ncol(d)) {
-
-    # bootstrap confidence interval and histogram
+    # bootstrap confidence interval
 
     outfit.ci <- boot::boot.ci(boot.outfit, index = i, type = "basic")
 
-    ci <- outfit.ci[[4]][, 4:5] # lower and upper 95 CI
-    print(ci)
+    print(outfit.ci)
   }
-return(ci)
 }
-

@@ -4,7 +4,7 @@
 \alias{boot.outfit}
 \title{Bootstrap boot outfit.mnsq Function}
 \usage{
-boot.outfit(data)
+boot.outfit(object)
 }
 \arguments{
 \item{data:}{the name of dataset}
