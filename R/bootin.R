@@ -9,10 +9,9 @@
 #'
 #'    #boot.infit(data)
 #'
-#' @export
 #' @importFrom TAM tam.mml msq.itemfit
 #' @importFrom boot boot boot.ci
-#'
+#' @export
 
 
 boot.infit <- function(data){

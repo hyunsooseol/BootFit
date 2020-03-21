@@ -9,10 +9,9 @@
 #'    #Not run
 #'    #infit.conf(data)
 #'
-#' @export
 #' @importFrom TAM tam.mml msq.itemfit
 #' @importFrom boot boot boot.ci
-#'
+#' @export
 
 infit.mnsq<- function(data,indices){
 
@@ -45,6 +44,5 @@ infit.confi <- function(data) {
     ci <- infit.ci[[4]][, 4:5] # lower and upper 95 CI
     print(ci)
   }
-return(ci)
 }
 
