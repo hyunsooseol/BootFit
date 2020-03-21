@@ -22,15 +22,13 @@ infit.mnsq<- function(data,indices){
   # item fit
   fit <- msq.itemfit(Rasch)
   infit<- fit[[1]][,6]
-  return(infit)
-}
+ }
 
 boot.infit <- function(data){
 
   boot.fit<- boot(data = data,statistic = infit.mnsq,
                   R=100)
 
-  return(boot.fit)
 }
 
 infit.confi <- function(data) {
@@ -46,6 +44,6 @@ infit.confi <- function(data) {
     ci <- infit.ci[[4]][, 4:5] # lower and upper 95 CI
     print(ci)
   }
-
+return(ci)
 }
 

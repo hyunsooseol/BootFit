@@ -21,7 +21,7 @@ outfit.mnsq<- function(data,indices){
   # item fit
   fit <- msq.itemfit(Rasch)
   outfit<- fit[[1]][,3]
-  return(outfit)
+
 }
 
 boot.outfit <- function(data){
@@ -29,7 +29,7 @@ boot.outfit <- function(data){
   boot.fit<- boot(data = data,statistic = outfit.mnsq,
                   R=100)
 
-  return(boot.fit)
+
 }
 
 outfit.confi <- function(data) {
@@ -45,6 +45,6 @@ outfit.confi <- function(data) {
     ci <- outfit.ci[[4]][, 4:5] # lower and upper 95 CI
     print(ci)
   }
-
+return(ci)
 }
 
