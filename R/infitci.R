@@ -9,24 +9,25 @@
 #'    #Not run
 #'    #infit.conf(data)
 #'
+#' @export
 #' @importFrom TAM tam.mml msq.itemfit
 #' @importFrom boot boot boot.ci
-#' @export
+#'
 
 infit.mnsq<- function(data,indices){
 
   data = data[indices,]
 
   # estimate Rasch model
-  Rasch <- tam.mml(resp=data)
+  Rasch <- TAM::tam.mml(resp=data)
   # item fit
-  fit <- msq.itemfit(Rasch)
+  fit <- TAM::msq.itemfit(Rasch)
   infit<- fit[[1]][,6]
  }
 
 boot.infit <- function(data){
 
-  boot.fit<- boot(data = data,statistic = infit.mnsq,
+  boot.fit<- boot::boot(data = data,statistic = infit.mnsq,
                   R=100)
 
 }
@@ -39,7 +40,7 @@ infit.confi <- function(data) {
 
   # bootstrap confidence interval
 
-    infit.ci <- boot.ci(boot.infit, index = i, type = "basic")
+    infit.ci <- boot::boot.ci(boot.infit, index = i, type = "basic")
 
     ci <- infit.ci[[4]][, 4:5] # lower and upper 95 CI
     print(ci)

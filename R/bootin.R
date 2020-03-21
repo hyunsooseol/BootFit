@@ -9,14 +9,15 @@
 #'
 #'    #boot.infit(data)
 #'
+#' @export
 #' @importFrom TAM tam.mml msq.itemfit
 #' @importFrom boot boot boot.ci
-#' @export
+#'
 
 
 boot.infit <- function(data){
 
-  boot.fit<- boot(data = data,statistic = infit.mnsq,R=100)
+  boot.fit<- boot::boot(data = data,statistic = infit.mnsq,R=100)
 
   return(boot.fit)
  }

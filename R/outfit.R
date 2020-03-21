@@ -17,9 +17,9 @@ outfit.mnsq<- function(data,indices){
   data = data[indices,]
 
   # estimate Rasch model
-  Rasch <- tam.mml(resp=data)
+  Rasch <- TAM::tam.mml(resp=data)
   # item fit
-  fit <- msq.itemfit(Rasch)
+  fit <- TAM::msq.itemfit(Rasch)
   outfit<- fit[[1]][,3]
   return(outfit)
 }

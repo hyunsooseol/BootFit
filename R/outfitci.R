@@ -17,16 +17,16 @@ outfit.mnsq<- function(data,indices){
   data = data[indices,]
 
   # estimate Rasch model
-  Rasch <- tam.mml(resp=data)
+  Rasch <- TAM::tam.mml(resp=data)
   # item fit
-  fit <- msq.itemfit(Rasch)
+  fit <- TAM::msq.itemfit(Rasch)
   outfit<- fit[[1]][,3]
 
 }
 
 boot.outfit <- function(data){
 
-  boot.fit<- boot(data = data,statistic = outfit.mnsq,
+  boot.fit<- boot::boot(data = data,statistic = outfit.mnsq,
                   R=100)
 
 
@@ -40,7 +40,7 @@ outfit.confi <- function(data) {
 
     # bootstrap confidence interval and histogram
 
-    outfit.ci <- boot.ci(boot.outfit, index = i, type = "basic")
+    outfit.ci <- boot::boot.ci(boot.outfit, index = i, type = "basic")
 
     ci <- outfit.ci[[4]][, 4:5] # lower and upper 95 CI
     print(ci)
