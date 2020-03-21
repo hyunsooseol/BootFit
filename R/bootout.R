@@ -9,6 +9,7 @@
 #'    #Not run
 #'    #boot.outfit(data)
 #'
+#' @importFrom TAM tam.mml msq.itemfit
 #' @importFrom boot boot boot.ci
 #' @export
 
