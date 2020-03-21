@@ -15,9 +15,8 @@
 
 infit.confi <- function(data) {
 
-  d <- boot.fit[[2]]
 
-  for (i in 1:ncol(d)) {
+  for (i in 1:ncol(data)) {
 
   # bootstrap confidence interval
 
