@@ -14,7 +14,7 @@
 #' @importFrom boot boot boot.ci
 #' @export
 
-infit.mnsq<- function(data,indices){
+boot.in<- function(data,indices){
 
   data = data[indices,]
 

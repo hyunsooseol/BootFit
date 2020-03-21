@@ -13,24 +13,6 @@
 #' @importFrom boot boot boot.ci
 #' @export
 
-infit.mnsq<- function(data,indices){
-
-  data = data[indices,]
-
-  # estimate Rasch model
-  Rasch <- TAM::tam.mml(resp=data)
-  # item fit
-  fit <- TAM::msq.itemfit(Rasch)
-  infit<- fit[[1]][,6]
- }
-
-boot.infit <- function(data){
-
-  boot.fit<- boot::boot(data = data,statistic = infit.mnsq,
-                  R=100)
-
-}
-
 infit.confi <- function(data) {
 
   d <- boot.fit[[2]]
