@@ -16,7 +16,7 @@
 
 boot.infit <- function(object){
 
-  boot.fit<- boot::boot(data = object,statistic = boot.in,R=100)
+  boot.fit<- boot::boot(data = object,statistic = boot.in,R=1000)
 
   return(boot.fit)
  }

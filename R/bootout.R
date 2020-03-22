@@ -15,7 +15,7 @@
 
 boot.outfit <- function(object){
 
-  boot.fit<- boot::boot(data = object,statistic = boot.out,R=100)
+  boot.fit<- boot::boot(data = object,statistic = boot.out,R=1000)
 
   return(boot.fit)
 }
