@@ -7,16 +7,16 @@
 boot.outfit(object)
 }
 \arguments{
-\item{data:}{the name of dataset}
+\item{data:}{Data frame}
 }
 \value{
-: Bootstrap Item Outfit.mnsq fit statistis
+: Bootstrap t Statistics. Also see 'boot' package
 }
 \description{
 This function calculates bootstrap item outfit Mnsq using MML estimation
 }
 \examples{
    #Not run
-   #boot.outfit(data)
+   #boot.outfit(object)
 
 }

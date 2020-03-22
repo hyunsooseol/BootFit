@@ -7,13 +7,14 @@
 boot.infit(object)
 }
 \arguments{
-\item{object:}{the name of objectset}
+\item{object:}{Data frame}
 }
 \value{
-: Bootstrap Statistics
+: Bootstrap t Statistics. Also see 'boot' package
 }
 \description{
 This function calculates bootstrap item infit Mnsq using MML estimation
+for the Rasch unidimensional model.
 }
 \examples{
 

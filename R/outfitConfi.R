@@ -1,13 +1,15 @@
-#' Bootstrap boot outfit.mnsq CI Function
+#' Bootstrap outfit.mnsq CI Function
 #'
-#' This function calculates bootstrap item infit Mnsq using MML estimation
-#' @param data: the name of dataset
+#' This function calculates bootstrap 95% Confidence Interval
+#' of outfit statistics using 'boot'package
 #'
-#' @return: Bootstrap Item Outfit.mnsq CI statistis
+#' @param data: Data Frame
+#'
+#' @return: bootstrap 95% Confidence Interval  of outfit statistics
 #'
 #' @examples
 #'    #Not run
-#'    #outfit.conf(data)
+#'    #outfit.conf(object)
 #'
 #' @importFrom TAM tam.mml msq.itemfit
 #' @importFrom boot boot.ci
@@ -29,4 +31,4 @@ outfit.conf <- function(object){
   return(result)
 }
 
-# 분석결과 출력:capture.output() 함수이용
+

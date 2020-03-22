@@ -1,14 +1,13 @@
 #' Bootstrap outfit.mnsq Function
 #'
 #' This function calculates bootstrap item Outfit Mnsq using MML estimation
-#' @param object: the name of objectset
+#' @param object: Data Frame
 #'
 #' @return: Bootstrap Item Outfit.mnsq fit statistis
 #'
 #' @examples
 #'    #Not run
-#'    #object <- read.csv("object.csv")
-#'    #outfit.mnsq(object)
+#'    #boot.out(object)
 #'
 #' @importFrom TAM tam.mml msq.itemfit
 #' @export

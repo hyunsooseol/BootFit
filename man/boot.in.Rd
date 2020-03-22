@@ -7,7 +7,7 @@
 boot.in(object, indices)
 }
 \arguments{
-\item{object:}{the name of objectset}
+\item{object:}{Data Frame}
 }
 \value{
 : Bootstrap Item Infit.mnsq fit statistis

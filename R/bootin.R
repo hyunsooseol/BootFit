@@ -1,9 +1,11 @@
 #' Bootstrap boot infit.mnsq Function
 #'
 #' This function calculates bootstrap item infit Mnsq using MML estimation
-#' @param object: the name of objectset
+#' for the Rasch unidimensional model.
 #'
-#' @return: Bootstrap Statistics
+#' @param object: Data frame
+#'
+#' @return: Bootstrap t Statistics. Also see 'boot' package
 #'
 #' @examples
 #'

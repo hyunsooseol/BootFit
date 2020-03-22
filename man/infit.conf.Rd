@@ -7,13 +7,14 @@
 infit.conf(object)
 }
 \arguments{
-\item{data:}{the name of dataset}
+\item{data:}{Data Frame}
 }
 \value{
-: Bootstrap Item Outfit.mnsq CI statistis
+: boot infit.mnsq CI Function
 }
 \description{
-This function calculates bootstrap item infit Mnsq using MML estimation
+This function calculates bootstrap item infit 95% Confidence Interval
+using 'boot' package
 }
 \examples{
    #Not run

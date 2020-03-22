@@ -1,13 +1,13 @@
 #' Bootstrap boot outfit.mnsq Function
 #'
 #' This function calculates bootstrap item outfit Mnsq using MML estimation
-#' @param data: the name of dataset
+#' @param data: Data frame
 #'
-#' @return: Bootstrap Item Outfit.mnsq fit statistis
+#' @return: Bootstrap t Statistics. Also see 'boot' package
 #'
 #' @examples
 #'    #Not run
-#'    #boot.outfit(data)
+#'    #boot.outfit(object)
 #'
 #' @importFrom TAM tam.mml msq.itemfit
 #' @importFrom boot boot boot.ci

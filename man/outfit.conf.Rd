@@ -2,21 +2,22 @@
 % Please edit documentation in R/outfitConfi.R
 \name{outfit.conf}
 \alias{outfit.conf}
-\title{Bootstrap boot outfit.mnsq CI Function}
+\title{Bootstrap outfit.mnsq CI Function}
 \usage{
 outfit.conf(object)
 }
 \arguments{
-\item{data:}{the name of dataset}
+\item{data:}{Data Frame}
 }
 \value{
-: Bootstrap Item Outfit.mnsq CI statistis
+: bootstrap 95% Confidence Interval  of outfit statistics
 }
 \description{
-This function calculates bootstrap item infit Mnsq using MML estimation
+This function calculates bootstrap 95% Confidence Interval
+of outfit statistics using 'boot'package
 }
 \examples{
    #Not run
-   #outfit.conf(data)
+   #outfit.conf(object)
 
 }

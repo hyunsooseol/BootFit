@@ -7,7 +7,7 @@
 boot.out(object, indices)
 }
 \arguments{
-\item{object:}{the name of objectset}
+\item{object:}{Data Frame}
 }
 \value{
 : Bootstrap Item Outfit.mnsq fit statistis
@@ -17,7 +17,6 @@ This function calculates bootstrap item Outfit Mnsq using MML estimation
 }
 \examples{
    #Not run
-   #object <- read.csv("object.csv")
-   #outfit.mnsq(object)
+   #boot.out(object)
 
 }

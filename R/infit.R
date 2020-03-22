@@ -1,7 +1,7 @@
 #' Bootstrap Infit.mnsq Function
 #'
 #' This function calculates bootstrap item Infit Mnsq using MML estimation
-#' @param object: the name of objectset
+#' @param object: Data Frame
 #'
 #' @return: Bootstrap Item Infit.mnsq fit statistis
 #'
