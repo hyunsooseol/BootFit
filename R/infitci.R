@@ -13,15 +13,18 @@
 #' @importFrom boot boot boot.ci
 #' @export
 
-infit.confi <- function(object) {
+infit.conf <- function(object) {
 
-  for (i in 1:ncol(object)) {
+  boot.infit<- boot.infit(object)
 
-  # bootstrap confidence interval
+  for (i in ncol(object)) {
 
-    infit.ci <- boot::boot.ci(boot.infit, index = i, type = "basic")
 
-    print(infit.ci)
+print(boot::boot.ci(boot.infit, index = i,
+                    type = "basic"))
+
+    }
+
   }
-}
+
 

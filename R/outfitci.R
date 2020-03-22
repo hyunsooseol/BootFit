@@ -13,15 +13,16 @@
 #' @importFrom boot boot boot.ci
 #' @export
 
-outfit.confi <- function(object) {
+outfit.conf <- function(object) {
 
+  boot.outfit<- boot.outfit(object)
 
   for (i in 1:ncol(object)) {
 
-    # bootstrap confidence interval
 
-    outfit.ci <- boot::boot.ci(boot.outfit, index = i, type = "basic")
+    print(boot::boot.ci(boot.outfit, index = i,
+                        type = "basic"))
 
-    print(outfit.ci)
+
   }
 }
