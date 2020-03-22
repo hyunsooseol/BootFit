@@ -19,3 +19,5 @@ boot.out(raven) # item outfit mnsq statistics
 boot.outfit(raven) # bootstrap t statistics
 
 outfit.conf(raven) # bootstrap outfit 95% CI
+
+![이미지 5](https://user-images.githubusercontent.com/37318620/77266505-f65e3800-6ce2-11ea-9f28-2707a8cc04ee.png)
